@@ -4,7 +4,7 @@ const button = document.querySelector('.button')
 const idEquals = document.querySelector('.equals')
 
 function random(first,secound){
-    let equals = 1+Math.floor((Math.random()*(secound-first))+first);
+    let equals = Math.round((Math.random()*(secound-first))+first);
     //console.log(equals)
     return(equals)
 }
