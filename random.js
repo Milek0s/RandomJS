@@ -9,17 +9,16 @@ function random(first,secound){
     return(equals)
 }
 function download(){
-    let first = idFirst.value
-    let valueFirst = Number(first)
+    let first = +idFirst.value
     //console.log(first)
 
-    let secound = idSecound.value
-    let valueSecound = Number(secound)
+    let secound = +idSecound.value
+
     //console.log(secound)
     if(valueFirst>valueSecound)
-        idEquals.innerHTML = random(valueFirst,valueSecound)
+        idEquals.innerHTML = random(first,secound)
     else
-        idEquals.innerHTML = random(valueSecound,valueFirst)
+        idEquals.innerHTML = random(secound,first)
 }
 download()
 button.addEventListener('click',download)
