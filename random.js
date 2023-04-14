@@ -15,7 +15,7 @@ function download(){
     let secound = +idSecound.value
 
     //console.log(secound)
-    if(valueFirst>valueSecound)
+    if(first>secound)
         idEquals.innerHTML = random(first,secound)
     else
         idEquals.innerHTML = random(secound,first)
