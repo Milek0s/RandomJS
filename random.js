@@ -5,16 +5,12 @@ const idEquals = document.querySelector('.equals')
 
 function random(first,secound){
     let equals = Math.round((Math.random()*(secound-first))+first);
-    //console.log(equals)
     return(equals)
 }
 function download(){
     let first = +idFirst.value
-    //console.log(first)
-
     let secound = +idSecound.value
-
-    //console.log(secound)
+    
     if(first>secound)
         idEquals.innerHTML = random(first,secound)
     else
