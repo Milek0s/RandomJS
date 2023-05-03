@@ -1,7 +1,8 @@
-:root{
+:root {
 	--bg: #2b2a33;
 	--bgContent: #42414d;
 	--main: #a6a5ad;
+	--cMain: #f1f1f1;
 }
 
 * {
@@ -15,42 +16,78 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-    font-family: 'Roboto', sans-serif;
+	@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+	font-family: "Roboto", sans-serif;
 }
-.contener {
+.random__contener {
 	height: 40vh;
 	width: 30vh;
 	background-color: var(--bgContent);
-	border-radius: 3vh;
-
+	border-radius: 2vh;
+}
+.random__contener {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
 }
-.equals {
-	color: var(--main);
+.equals,
+h1 {
+	color: var(--cMain);
 	font-size: 5vh;
 }
 .button {
 	width: 25vh;
 	height: 5vh;
-	border-radius: 3vh;
+	border-radius: 2vh;
+	background-color: var(--bg);
+	color: var(--main);
+	border: none;
+	font-size: 3vh;
+	transition: all 0.7 ease;
+}
+.button:hover {
+	border: var(--main) 0.1vh solid;
+}
+.button:active {
+	border: var(--cMain) solid 0.1vh;
+	color: var(--cMain);
+	background-color: var(--bgContent);
 }
 input {
 	width: 25vh;
 	height: 5vh;
-	border-radius: 3vh;
-    font-size: 3vh;
-    text-align: center;
+	border-radius: 2vh;
+	font-size: 3vh;
+	text-align: center;
+	background-color: var(--bg);
+	color: var(--main);
+	border: none;
 }
-p{
-    text-align: center;
-    color: var(--main);
-    font-size: 3vh;
+input:hover {
+	border: var(--main) solid 0.1vh;
 }
-a{
-	position:absolute ;
+input:target {
+	border: var(--cMain) solid 0.1vh;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	margin: 0;
+}
+p {
+	text-align: center;
+	color: var(--main);
+	font-size: 3vh;
+}
+.git {
+	position: absolute;
 	bottom: 20px;
+	color: var(--cMain);
+}
+.git:hover {
+	background-color: var(--bgContent);
+	border-radius: 0.4vh;
 }
