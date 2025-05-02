@@ -10,11 +10,7 @@ function random(first,secound){
 function download(){
     let first = +idFirst.value
     let secound = +idSecound.value
-    
-    if(first>secound)
-        idEquals.innerHTML = random(first,secound)
-    else
-        idEquals.innerHTML = random(secound,first)
+    idEquals.innerHTML = random(min(secound,first),max(secound,first) )
 }
 download()
 button.addEventListener('click',download)
